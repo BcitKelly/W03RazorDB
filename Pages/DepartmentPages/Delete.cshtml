@@ -1,0 +1,26 @@
+@page
+@model W03RazorDB.Pages.DepartmentPages.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete Department";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this Department?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Department.DepartmentName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Department.DepartmentName)
+        </dd>
+    </dl>
+    <form method="post">
+        <input type="hidden" asp-for="Department.DepartmentId" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>
